@@ -12,4 +12,13 @@
     tools:context="com.example.raimundoj.fundownv2.Maniqui"
     tools:showIn="@layout/activity_maniqui">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fondo"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+
 </RelativeLayout>
