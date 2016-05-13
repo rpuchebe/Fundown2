@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -27,7 +28,11 @@ public class Box extends AppCompatActivity implements View.OnClickListener {
     ImageView item3;
     ImageView item4;
     ImageView item5;
+
     private android.widget.RelativeLayout.LayoutParams layoutParams;
+
+    public Box() {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,19 +50,19 @@ public class Box extends AppCompatActivity implements View.OnClickListener {
         });
 
         text2=(ImageView)findViewById(R.id.text2);
-        item6=(ImageView)findViewById(R.id.item6);
         item1=(ImageView)findViewById(R.id.item1);
         item2=(ImageView)findViewById(R.id.item2);
         item3=(ImageView)findViewById(R.id.item3);
         item4=(ImageView)findViewById(R.id.item4);
         item5=(ImageView)findViewById(R.id.item5);
+        item6=(ImageView)findViewById(R.id.item6);
         startBackground();
         startItem();
 
         item1.setOnTouchListener(new View.OnTouchListener()
 
         {
-            int prevX, prevY, firtsX, firtsY;
+            int prevX, prevY, firtsX, firtsY, temp = 0;
 
             @Override
             public boolean onTouch(final View v, final MotionEvent event) {
@@ -76,22 +81,21 @@ public class Box extends AppCompatActivity implements View.OnClickListener {
                         par.topMargin += (int) event.getRawY() - prevY;
                         par.leftMargin += (int) event.getRawX() - prevX;
                         Log.d(msg, "" + par.topMargin + "," + par.leftMargin + "");
-                        par.topMargin = -500;
-                        if (par.topMargin < -600) {
-                            par.topMargin = firtsX;
-                            par.leftMargin = firtsY;
+                        Toast.makeText(getApplicationContext(), "" + par.topMargin + "," + par.leftMargin + "",
+                                Toast.LENGTH_LONG).show();
+
+                        if (par.topMargin < -650) {par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if (par.topMargin > -300) {
-                            par.topMargin = firtsX;
-                            par.leftMargin = firtsY;
+                        if (par.topMargin > -350) {par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if (par.leftMargin > 1050) {
-                            par.topMargin = firtsX;
-                            par.leftMargin = firtsY;
+                        if (par.leftMargin > 850) {par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if (par.leftMargin < 650) {
-                            par.topMargin = firtsX;
-                            par.leftMargin = firtsY;
+                        if (par.leftMargin < 650) {par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
+                        }
+
+                        if ( temp == 0 ){
+                            par.topMargin = -650;
+
                         }
 
                         v.setLayoutParams(par);
@@ -114,7 +118,7 @@ public class Box extends AppCompatActivity implements View.OnClickListener {
         item2.setOnTouchListener(new View.OnTouchListener()
 
         {
-            int prevX, prevY,firtsX,firtsY;
+            int prevX, prevY,firtsX,firtsY, temp = 0;
 
             @Override
             public boolean onTouch(final View v, final MotionEvent event) {
@@ -133,14 +137,20 @@ public class Box extends AppCompatActivity implements View.OnClickListener {
                         par.topMargin += (int) event.getRawY() - prevY;
                         par.leftMargin += (int) event.getRawX() - prevX;
                         Log.d(msg,""+par.topMargin+","+par.leftMargin+"");
-                        par.topMargin = -500;
-                        if(par.topMargin < -600){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        Toast.makeText(getApplicationContext(),"" + par.topMargin + "," + par.leftMargin + "",
+                                Toast.LENGTH_LONG).show();
+
+                        if(par.topMargin < -650){par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if(par.topMargin > -300){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        if(par.topMargin > -350){par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if(par.leftMargin > 1500){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        if(par.leftMargin > 1250){par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if(par.leftMargin < 860){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        if(par.leftMargin < 950){par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
+                        }
+                        if ( temp == 0 ){
+                            par.topMargin = -650;
+
                         }
 
                         v.setLayoutParams(par);
@@ -163,7 +173,7 @@ public class Box extends AppCompatActivity implements View.OnClickListener {
         item3.setOnTouchListener(new View.OnTouchListener()
 
         {
-            int prevX, prevY,firtsX,firtsY;
+            int prevX, prevY, firtsX, firtsY, temp = 0;
 
             @Override
             public boolean onTouch(final View v, final MotionEvent event) {
@@ -181,15 +191,21 @@ public class Box extends AppCompatActivity implements View.OnClickListener {
                     case MotionEvent.ACTION_UP: {
                         par.topMargin += (int) event.getRawY() - prevY;
                         par.leftMargin += (int) event.getRawX() - prevX;
-                        Log.d(msg,""+par.topMargin+","+par.leftMargin+"");
-                        par.topMargin = -500;
-                        if(par.topMargin < -600){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        Log.d(msg, "" + par.topMargin + "," + par.leftMargin + "");
+                        Toast.makeText(getApplicationContext(),"" + par.topMargin + "," + par.leftMargin + "",
+                                Toast.LENGTH_LONG).show();
+
+                        if (par.topMargin < -650) {par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if(par.topMargin > -300){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        if (par.topMargin > -350) {par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if(par.leftMargin > 1050){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        if (par.leftMargin > 850) {par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if(par.leftMargin < 650){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        if (par.leftMargin < 650) {par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
+                        }
+                        if ( temp == 0 ){
+                            par.topMargin = -650;
+
                         }
 
                         v.setLayoutParams(par);
@@ -212,7 +228,7 @@ public class Box extends AppCompatActivity implements View.OnClickListener {
         item4.setOnTouchListener(new View.OnTouchListener()
 
         {
-            int prevX, prevY,firtsX,firtsY;
+            int prevX, prevY, firtsX, firtsY, temp = 0;
 
             @Override
             public boolean onTouch(final View v, final MotionEvent event) {
@@ -230,15 +246,20 @@ public class Box extends AppCompatActivity implements View.OnClickListener {
                     case MotionEvent.ACTION_UP: {
                         par.topMargin += (int) event.getRawY() - prevY;
                         par.leftMargin += (int) event.getRawX() - prevX;
-                        Log.d(msg,""+par.topMargin+","+par.leftMargin+"");
-                        par.topMargin = -500;
-                        if(par.topMargin < -600){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        Log.d(msg, "" + par.topMargin + "," + par.leftMargin + "");
+                        Toast.makeText(getApplicationContext(),"" + par.topMargin + "," + par.leftMargin + "",
+                                Toast.LENGTH_LONG).show();
+
+                        if(par.topMargin < -650){par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if(par.topMargin > -300){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        if(par.topMargin > -350){par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if(par.leftMargin > 650){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        if(par.leftMargin > 500){par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if(par.leftMargin < 350){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        if(par.leftMargin < 200){par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
+                        }
+                        if ( temp == 0 ){
+                            par.topMargin = -650;
                         }
 
                         v.setLayoutParams(par);
@@ -261,7 +282,7 @@ public class Box extends AppCompatActivity implements View.OnClickListener {
         item5.setOnTouchListener(new View.OnTouchListener()
 
         {
-            int prevX, prevY,firtsX,firtsY;
+            int prevX, prevY,firtsX,firtsY, temp = 0;
 
             @Override
             public boolean onTouch(final View v, final MotionEvent event) {
@@ -280,14 +301,18 @@ public class Box extends AppCompatActivity implements View.OnClickListener {
                         par.topMargin += (int) event.getRawY() - prevY;
                         par.leftMargin += (int) event.getRawX() - prevX;
                         Log.d(msg,""+par.topMargin+","+par.leftMargin+"");
-                        par.topMargin = -500;
-                        if(par.topMargin < -600){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        Toast.makeText(getApplicationContext(),"" + par.topMargin + "," + par.leftMargin + "",
+                                Toast.LENGTH_LONG).show();
+                        if(par.topMargin < -650){par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if(par.topMargin > -300){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        if(par.topMargin > -350){par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if(par.leftMargin > 1500){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        if(par.leftMargin > 1250){par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if(par.leftMargin < 860){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        if(par.leftMargin < 950){par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
+                        }
+                        if ( temp == 0 ){
+                            par.topMargin = -650;
                         }
 
                         v.setLayoutParams(par);
@@ -310,7 +335,7 @@ public class Box extends AppCompatActivity implements View.OnClickListener {
         item6.setOnTouchListener(new View.OnTouchListener()
 
         {
-            int prevX, prevY,firtsX,firtsY;
+            int prevX, prevY,firtsX,firtsY,temp = 0;
 
             @Override
             public boolean onTouch(final View v, final MotionEvent event) {
@@ -329,14 +354,19 @@ public class Box extends AppCompatActivity implements View.OnClickListener {
                         par.topMargin += (int) event.getRawY() - prevY;
                         par.leftMargin += (int) event.getRawX() - prevX;
                         Log.d(msg,""+par.topMargin+","+par.leftMargin+"");
+                        Toast.makeText(getApplicationContext(),"" + par.topMargin + "," + par.leftMargin + "",
+                                Toast.LENGTH_LONG).show();
                         par.topMargin = -500;
-                        if(par.topMargin < -600){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        if(par.topMargin < -650){par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if(par.topMargin > -300){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        if(par.topMargin > -350){par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if(par.leftMargin > 650){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        if(par.leftMargin > 550){par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
                         }
-                        if(par.leftMargin < 350){par.topMargin = firtsX;par.leftMargin = firtsY;
+                        if(par.leftMargin < 200){par.topMargin = firtsX;par.leftMargin = firtsY;temp = 1;
+                        }
+                        if ( temp == 0 ){
+                            par.topMargin = -650;
                         }
 
                         v.setLayoutParams(par);

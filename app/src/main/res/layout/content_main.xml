@@ -41,7 +41,7 @@
         android:layout_width="350px"
         android:layout_height="700px"
         android:id="@+id/maniqui"
-        android:background="#00ffffff"
+        android:background="@drawable/maniqui"
         android:layout_alignParentBottom="true"
         android:layout_toStartOf="@+id/box"
         android:clickable="false" />

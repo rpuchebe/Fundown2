@@ -12,9 +12,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/fondo"
-
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="400px"
+        android:layout_height="750px"
+        android:id="@+id/maniqui"
+        android:background="@drawable/maniquimw"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:clickable="false" />
 
     <ImageView
         android:layout_width="400px"
@@ -31,6 +40,7 @@
         android:layout_width="200px"
         android:layout_height="200px"
         android:id="@+id/item1"
+        android:background="@drawable/shortm1"
         android:layout_alignTop="@+id/arrow"
         android:layout_alignParentStart="true"
         android:layout_marginStart="220dp"/>
@@ -40,7 +50,7 @@
         android:layout_width="200px"
         android:layout_height="200px"
         android:id="@+id/item2"
-        android:background="@drawable/shirt"
+        android:background="@drawable/shirtm1"
         android:layout_alignTop="@+id/arrow"
         android:layout_alignParentStart="true"
         android:layout_marginStart="280dp"/>
@@ -58,11 +68,12 @@
         android:layout_width="200px"
         android:layout_height="200px"
         android:id="@+id/arrow"
-        android:background="@drawable/arrow"
         android:layout_marginBottom="5dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginStart="110dp" />
+
+
 
 
 </RelativeLayout>

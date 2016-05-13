@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         box.setOnClickListener(this);
         maniqui=(ImageButton)findViewById(R.id.maniqui);
         maniqui.setOnClickListener(this);
-        startManiqui();
+
 
     }
 
@@ -59,12 +59,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         ImageView fondo = (ImageView)findViewById(R.id.fondo);
         Glide.with(this).load(R.drawable.fondo).into(fondo);
-
-    }
-    private void startManiqui(){
-
-        ImageView maniqui = (ImageView)findViewById(R.id.maniqui);
-        Glide.with(this).load(R.drawable.maniqui1).into(maniqui);
 
     }
 
