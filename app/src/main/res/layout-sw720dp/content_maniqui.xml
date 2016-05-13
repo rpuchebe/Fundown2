@@ -12,69 +12,135 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/fondo"
-
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
 
     <ImageButton
-        android:layout_width="350px"
-        android:layout_height="700px"
+        android:layout_width="500px"
+        android:layout_height="900px"
         android:id="@+id/maniqui"
-        android:background="@drawable/maniquimw"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="70dp"
-        android:clickable="false" />
+        android:clickable="false"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
 
     <ImageView
-        android:layout_width="400px"
-        android:layout_height="300px"
-        android:id="@+id/text2"
-        android:layout_marginTop="50px"
-        android:layout_marginRight="50px"
-        android:background="@drawable/text2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="100dp" />
-
-    <ImageView
-        android:layout_width="200px"
-        android:layout_height="200px"
+        android:layout_width="432px"
+        android:layout_height="257px"
         android:id="@+id/item1"
-        android:layout_alignTop="@+id/arrow"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="220dp"/>
-
-
-    <ImageView
-        android:layout_width="200px"
-        android:layout_height="200px"
-        android:id="@+id/item2"
         android:background="@drawable/shirtm1"
-        android:layout_alignTop="@+id/arrow"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="280dp"/>
+        android:layout_marginTop="100px"
+        android:layout_marginLeft="50px"/>
 
     <ImageView
-        android:layout_width="200px"
-        android:layout_height="200px"
-        android:id="@+id/item3"
-        android:background="@drawable/shoes1"
-        android:layout_alignTop="@+id/arrow"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="330dp"/>
+        android:layout_width="295px"
+        android:layout_height="100px"
+        android:id="@+id/item2"
+        android:background="@drawable/shoes3"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="500px"
+         />
 
     <ImageButton
-        android:layout_width="200px"
-        android:layout_height="200px"
-        android:id="@+id/arrow"
+        android:layout_width="245px"
+        android:layout_height="150px"
+        android:id="@+id/item3"
         android:background="@drawable/shortm1"
-        android:layout_marginBottom="5dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="110dp" />
+        android:layout_marginLeft="140px"
+        android:layout_marginTop="1050px" />
 
+    <ImageButton
+        android:layout_width="432px"
+        android:layout_height="257px"
+        android:id="@+id/item4"
+        android:background="@drawable/shirtm2"
+        android:layout_marginLeft="50px"
+        android:layout_marginTop="700px"/>
 
+    <ImageButton
+        android:layout_width="295px"
+        android:layout_height="100px"
+        android:id="@+id/item5"
+        android:background="@drawable/shoes2"
+        android:layout_marginLeft="550px"
+        android:layout_marginTop="200px"
+         />
 
+    <ImageButton
+        android:layout_width="295px"
+        android:layout_height="100px"
+        android:id="@+id/item6"
+        android:background="@drawable/shoes1"
+        android:layout_marginLeft="550px"
+        android:layout_marginTop="1100px"
+         />
+
+    <ImageButton
+        android:layout_width="432px"
+        android:layout_height="257px"
+        android:id="@+id/item7"
+        android:background="@drawable/shirtm3"
+        android:layout_marginLeft="480px"
+        android:layout_marginTop="400px"
+         />
+
+    <ImageButton
+        android:layout_width="245px"
+        android:layout_height="150px"
+        android:id="@+id/item8"
+        android:background="@drawable/shortm2"
+        android:layout_marginLeft="570px"
+        android:layout_marginTop="800px"
+         />
+
+    <ImageButton
+        android:layout_width="245px"
+        android:layout_height="150px"
+        android:id="@+id/item9"
+        android:background="@drawable/shortm3"
+        android:layout_marginLeft="1750px"
+        android:layout_marginTop="750px"
+        />
+    <ImageButton
+        android:layout_width="432px"
+        android:layout_height="257px"
+        android:id="@+id/item10"
+        android:background="@drawable/shirtw1"
+        android:layout_marginLeft="2100px"
+        android:layout_marginTop="700px"
+        />
+    <ImageButton
+        android:layout_width="432px"
+        android:layout_height="257px"
+        android:id="@+id/item11"
+        android:background="@drawable/shirtw2"
+        android:layout_marginLeft="1650px"
+        android:layout_marginTop="950px"
+        />
+
+    <ImageButton
+        android:layout_width="432px"
+        android:layout_height="257px"
+        android:id="@+id/item12"
+        android:background="@drawable/shirtw3"
+        android:layout_marginLeft="2100px"
+        android:layout_marginTop="100px"
+        />
+
+    <ImageButton
+        android:layout_width="245px"
+        android:layout_height="150px"
+        android:id="@+id/item13"
+        android:background="@drawable/shortw1"
+        android:layout_marginLeft="2200px"
+        android:layout_marginTop="480px" />
+
+    <ImageButton
+        android:layout_width="245px"
+        android:layout_height="150px"
+        android:id="@+id/item14"
+        android:background="@drawable/shortw2"
+        android:layout_marginLeft="1750px"
+        android:layout_marginTop="150px" />
 
 </RelativeLayout>
