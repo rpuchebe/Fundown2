@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/fondo"
+        android:background="@drawable/fondosin"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
 
@@ -115,7 +116,7 @@
         android:id="@+id/item11"
         android:background="@drawable/shirtw2"
         android:layout_marginLeft="1650px"
-        android:layout_marginTop="950px"
+        android:layout_marginTop="400px"
         />
 
     <ImageButton

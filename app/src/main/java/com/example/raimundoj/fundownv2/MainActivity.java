@@ -13,6 +13,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 
 import xyz.hanks.library.SmallBang;
 
@@ -43,9 +45,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         box.setOnClickListener(this);
         maniqui=(ImageButton)findViewById(R.id.maniqui);
         maniqui.setOnClickListener(this);
+        YoYo.with(Techniques.Flash)
+                .duration(1700)
+                .playOn(findViewById(R.id.box));
+        YoYo.with(Techniques.Flash)
+                .duration(1700)
+                .playOn(findViewById(R.id.maniqui));
 
-
-    }
+        YoYo.with(Techniques.Flash)
+                .duration(1700)
+                .delay(10000)
+                .playOn(findViewById(R.id.box));
+        YoYo.with(Techniques.Flash)
+                .duration(1700)
+                .delay(12000)
+                .playOn(findViewById(R.id.maniqui));
+        }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -84,13 +99,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
 
             case R.id.box:
-
+                YoYo.with(Techniques.TakingOff)
+                        .duration(700)
+                        .playOn(findViewById(R.id.box));
                 Intent intent = new Intent(MainActivity.this, Box.class);
                 startActivity(intent);
 
                 break;
             case R.id.maniqui:
-
+                YoYo.with(Techniques.TakingOff)
+                        .duration(700)
+                        .playOn(findViewById(R.id.maniqui));
                 intent = new Intent(MainActivity.this, Maniqui.class);
                 startActivity(intent);
 
